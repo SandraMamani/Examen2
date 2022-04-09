@@ -1,4 +1,4 @@
-import IngresarCodigoSecreto from "./juego.js";
+import IngresarCodigoSecreto from "./Juego.js";
 import convertirCodigoSecreto from "./convertirCodigoSecreto.js";
 
 describe("Juego", () => {
