@@ -1,20 +1,30 @@
-function convertirCodigoSecreto(codigo)
-{
-    var cantidadDigitos = codigo.length;
-    var codigosecreto = codigo;
-    if(cantidadDigitos == 4)
+class Juego{
+    convertirCodigoSecreto(codigo)
     {
-        codigosecreto = "****";
+        var codigosecreto = codigo;
+        if(this.contarCantidadDeDigitos(codigo) == 4)
+        {
+            codigosecreto = "****";
+        }
+        if(this.contarCantidadDeDigitos(codigo) == 5)
+        {
+            codigosecreto = "*****";
+        }         
+        if(this.contarCantidadDeDigitos(codigo) == 6)
+        {
+            codigosecreto = "******";
+        }
+        return codigosecreto;  
     }
-    if(cantidadDigitos == 5)
+
+    contarCantidadDeDigitos(codigo)
     {
-        codigosecreto = "*****";
-    }         
-    if(cantidadDigitos == 6)
-    {
-        codigosecreto = "******";
+        var cantidadDigitos = codigo.length;
+        return cantidadDigitos;
     }
-    return codigosecreto;    
+
 }
 
-export default convertirCodigoSecreto;
+
+
+export default Juego;
