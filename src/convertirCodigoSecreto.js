@@ -1,19 +1,20 @@
 function convertirCodigoSecreto(codigo)
 {
     var cantidadDigitos = codigo.length;
+    var codigosecreto = codigo;
     if(cantidadDigitos == 4)
     {
-        codigo = "****";
+        codigosecreto = "****";
     }
     if(cantidadDigitos == 5)
     {
-        codigo = "*****";
+        codigosecreto = "*****";
     }         
     if(cantidadDigitos == 6)
     {
-        codigo = "******";
+        codigosecreto = "******";
     }
-    return codigo;    
+    return codigosecreto;    
 }
 
 export default convertirCodigoSecreto;
