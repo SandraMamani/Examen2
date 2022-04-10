@@ -8,9 +8,6 @@ const Intentos_imput = document.querySelector("#intento");
 const form2 = document.querySelector("#Jugador2-form");
 const div3 = document.querySelector("#respuesta-div");
 
-
-
-
 form.addEventListener("submit", (event) => {
     event.preventDefault();
     const jugar = new Juego();
@@ -24,5 +21,4 @@ form2.addEventListener("submit", (event) => {
     event.preventDefault();
     const intento2 = Intentos_imput.value;
     div3.innerHTML = "<p>" + intento2 + "</p>";
-    
 });

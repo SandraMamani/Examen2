@@ -22,8 +22,21 @@ class Juego{
         var cantidadDigitos = codigo.length;
         return cantidadDigitos;
     }
-
-   
+    CompararSiEsVaca(codigosecreto,codigoIntento)
+    {
+        var vaca = '*';
+        for(var i = 0; i < codigosecreto.length; i++)
+        {
+            for(var j = 0; j < codigoIntento.length; j++)
+            {
+                if(codigosecreto[i] == codigoIntento[j])
+                {
+                    vaca;
+                }
+            }
+        }
+        return vaca;
+    }  
 
 }
 

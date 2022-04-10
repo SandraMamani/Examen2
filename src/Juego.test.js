@@ -19,4 +19,7 @@ describe("Juego", () => {
   it("Ingresar el codigo secreto no visible", () => {
     expect(jugar.convertirCodigoSecreto("123456")).toEqual("******");
   }); 
+  it("Ingresar el codigo intento para saber el primer digito es vaca", () => {
+    expect(jugar.CompararSiEsVaca("1122","1000")).toEqual('*');
+  }); 
 });
