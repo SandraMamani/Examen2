@@ -9,4 +9,12 @@ describe("Juego", () => {
   it("Ingresar el codigo secreto no visible", () => {
     expect(convertirCodigoSecreto("1234")).toEqual("****");
   });
+
+  it("Ingresar el codigo secreto no visible", () => {
+    expect(convertirCodigoSecreto("12345")).toEqual("*****");
+  });
+
+  it("Ingresar el codigo secreto no visible", () => {
+    expect(convertirCodigoSecreto("123456")).toEqual("******");
+  }); 
 });
