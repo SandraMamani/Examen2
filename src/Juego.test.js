@@ -31,4 +31,7 @@ describe("Juego", () => {
   it("Comparar el codigo secreto con el intento solamente en la posicion 0 para saber si es toro", () => {
     expect(jugar.CompararSiEsToro("12345","14000")).toEqual('!');
   }); 
+  it("Comparara todas las posiciones del codigo secreto con el codigo intento para saber cuantos toros existe", () => {
+    expect(jugar.CompararSiEsToro("0123","0153")).toEqual("!!!");
+  });
 });
