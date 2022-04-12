@@ -25,15 +25,18 @@ class Juego{
     CompararSiEsVaca(codigosecreto,codigoIntento)
     {
         let vaca = '*';
-        for(var i = 0; i < codigoIntento.length; i++)
+        let cadenaVacas = '';
+        for(var j = 0; j <codigosecreto.length; j++)
         {
-            if(codigoIntento.charAt(i) === codigosecreto.charAt(0))
+            for(var i = 0; i < codigoIntento.length; i++)
             {
-                vaca;
+                if(codigoIntento.charAt(i) === codigosecreto.charAt(j))
+                {
+                    cadenaVacas += vaca;
+                }
             }
-        }
-        
-        return vaca;
+        }       
+        return cadenaVacas;
     }  
 }
 

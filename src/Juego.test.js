@@ -24,5 +24,8 @@ describe("Juego", () => {
   }); 
   it("Comparara la primera posicion de codigo Secreto con todos los caracteres del intento", () => {
     expect(jugar.CompararSiEsVaca("0123","0555")).toEqual('*');
+  });
+  it("Comparara todas los digitos del codigo Secreto con todos los digitos del intento", () => {
+    expect(jugar.CompararSiEsVaca("0123","0551")).toEqual("**");
   }); 
 });
