@@ -72,7 +72,6 @@ class Juego{
       let cadToros =this.CompararSiEsToro(codigosecreto,codigoIntento);
       let cadVacas = this.CompararSiEsVaca(codigosecreto,codigoIntento);   
       let CadToroVaca=cadToros.concat(cadVacas);
-        
       return CadToroVaca;
     }
     RestarIntentosJuego()
@@ -91,6 +90,18 @@ class Juego{
             this.RestarIntentosJuego();
         }
         return this.intentos;
+    }
+    JugarOtravez(codigosecreto,codigoIntento)
+    {   
+        let cadena = "";
+        var intento1;
+        cadena = juegoToroVaca(codigosecreto,codigoIntento);
+        intento1 = EscribirIntentos(codigosecreto,codigoIntento);
+        if( cadena == "")
+        {
+            alert("Ninguna coincidencia");
+        }
+       return cadena;
     }
 }
 

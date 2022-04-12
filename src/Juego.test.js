@@ -40,4 +40,7 @@ describe("Juego", () => {
   it("Si el codigo intento y el codigo secreto no son iguales se debe restar los intentos ", () => {
     expect(jugar.EscribirIntentos("1234","5555")).toEqual(9);
   });
+  it("Volver a jugar", () => {
+    expect(jugar.juegoToroVaca("1234","5555")).toEqual("");
+  });
 });
