@@ -75,6 +75,14 @@ class Juego{
         
       return CadToroVaca;
     }
+    RestarIntentosJuego()
+    {
+        this.intentos = this.intentos -1;
+    }
+    Ganar()
+    {
+        alert("GANASTE!!!!");
+    }
 }
 
 export default Juego;
