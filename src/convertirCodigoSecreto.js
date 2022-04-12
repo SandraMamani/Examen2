@@ -22,6 +22,15 @@ class Juego{
         var cantidadDigitos = codigo.length;
         return cantidadDigitos;
     }
+    compararCadenas(cadena1,cadena2,pos1,pos2)
+    {
+        var resp = false;
+        if(cadena1.charAt(pos1) === cadena2.charAt(pos2))
+        {
+            resp =true;
+        }
+        return resp;
+    }
     CompararSiEsVaca(codigosecreto,codigoIntento)
     {
         let vaca = '*';
@@ -30,13 +39,12 @@ class Juego{
         {
             for(var i = 0; i < codigoIntento.length; i++)
             {
-                if(codigoIntento.charAt(i) === codigosecreto.charAt(j))
+                if(this.compararCadenas(codigosecreto,codigoIntento,i,j) == true)
                 {
                     if (i != j)
                     {
                         cadenaVacas += vaca;
                     }
-                    
                 }
             }
         }       
@@ -48,7 +56,7 @@ class Juego{
         let cadenaToros = '';
         for (var i =0; i < codigoIntento.length; i++)
         {
-            if (codigoIntento.charAt(i) === codigosecreto.charAt(i))
+            if (this.compararCadenas(codigosecreto,codigoIntento,i,i) == true)
             {
                 cadenaToros += toro;
             }
