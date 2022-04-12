@@ -103,6 +103,34 @@ class Juego{
         }
        return cadena;
     }
+    
+    EsNumeSiguiente(num,numsig)
+    {
+      let resp='';
+      var numsig = numsig- 1;
+      if (num==numsig)
+      {
+         resp='1';
+      }
+      else{
+          resp='0';
+      }
+      return resp;
+    }
+  
+    difiereDelNumero(codigosecreto,codigoIntento)
+    {
+        let ternera = '#';
+        let cadenaTernera = '';
+        for (var i =0; i < codigoIntento.length; i++)
+        {
+            if (this.compararCadenas(codigosecreto,codigoIntento,(this.EsNumeSiguiente(i,i)==1)) == true)
+            {
+                cadenaTernera += ternera;
+            }
+        }
+       return cadenaTernera;
+    }
 }
 
 export default Juego;
