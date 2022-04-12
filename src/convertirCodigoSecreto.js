@@ -32,7 +32,11 @@ class Juego{
             {
                 if(codigoIntento.charAt(i) === codigosecreto.charAt(j))
                 {
-                    cadenaVacas += vaca;
+                    if (i != j)
+                    {
+                        cadenaVacas += vaca;
+                    }
+                    
                 }
             }
         }       
@@ -51,6 +55,16 @@ class Juego{
         }
        return cadenaToros;
     }  
+
+    juegoToroVaca(codigosecreto,codigoIntento)
+    {
+         let cadToros=this.CompararSiEsToro(codigosecreto,codigoIntento);
+         let cadVacas= this.CompararSiEsVaca(codigosecreto,codigoIntento);   
+         let CadToroVaca=cadToros.concat(cadVacas);
+         return CadToroVaca;
+    }
+
+    
 
 
 }
