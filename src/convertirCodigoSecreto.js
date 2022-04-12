@@ -83,6 +83,15 @@ class Juego{
     {
         alert("GANASTE!!!!");
     }
+    
+    EscribirIntentos(codigoIntento, codigosecreto)
+    {
+        if(codigoIntento != codigosecreto)
+        {
+            this.RestarIntentosJuego();
+        }
+        return this.intentos;
+    }
 }
 
 export default Juego;
