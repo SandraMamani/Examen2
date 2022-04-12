@@ -1,4 +1,8 @@
 class Juego{
+    constructor()
+    {
+        this.intentos = 10;
+    }
     convertirCodigoSecreto(codigo)
     {
         var codigosecreto = codigo;
@@ -16,7 +20,6 @@ class Juego{
         }
         return codigosecreto;  
     }
-
     contarCantidadDeDigitos(codigo)
     {
         var cantidadDigitos = codigo.length;
@@ -31,6 +34,7 @@ class Juego{
         }
         return resp;
     }
+    
     CompararSiEsVaca(codigosecreto,codigoIntento)
     {
         let vaca = '*';
@@ -63,18 +67,26 @@ class Juego{
         }
        return cadenaToros;
     }  
-
     juegoToroVaca(codigosecreto,codigoIntento)
     {
-         let cadToros=this.CompararSiEsToro(codigosecreto,codigoIntento);
-         let cadVacas= this.CompararSiEsVaca(codigosecreto,codigoIntento);   
-         let CadToroVaca=cadToros.concat(cadVacas);
-         return CadToroVaca;
+      let cadToros =this.CompararSiEsToro(codigosecreto,codigoIntento);
+      let cadVacas = this.CompararSiEsVaca(codigosecreto,codigoIntento);   
+      let CadToroVaca=cadToros.concat(cadVacas);
+        
+      return CadToroVaca;
     }
-
-    
-
-
+    RestarIntentosJuego()
+    {
+        this.intentos = this.intentos -1;
+    }
+    EscribirIntentos(codigoIntento, codigosecreto)
+    {
+        if(codigoIntento != codigosecreto)
+        {
+            this.RestarIntentosJuego();
+        }
+        return this.intentos;
+    }
 }
 
 export default Juego;
