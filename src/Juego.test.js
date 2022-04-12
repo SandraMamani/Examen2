@@ -22,4 +22,7 @@ describe("Juego", () => {
   it("Comparar el codigo secreto con el intento solamente en la posicion 0", () => {
     expect(jugar.CompararSiEsVaca("0123","0555")).toEqual('*');
   }); 
+  it("Comparara la primera posicion de codigo Secreto con todos los caracteres del intento", () => {
+    expect(jugar.CompararSiEsVaca("0123","0555")).toEqual('*');
+  }); 
 });
