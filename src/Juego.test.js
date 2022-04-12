@@ -43,4 +43,7 @@ describe("Juego", () => {
   it("Volver a jugar", () => {
     expect(jugar.juegoToroVaca("1234","5555")).toEqual("");
   });
+  it("deberia devolver # cuando uno de los números ingresados por el usuario difiere en 1 del código secreto ", () => {
+    expect(jugar. difiereDelNumero("1234","5678")).toEqual("#");
+  });
 });
