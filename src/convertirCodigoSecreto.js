@@ -75,18 +75,6 @@ class Juego{
         
       return CadToroVaca;
     }
-    RestarIntentosJuego()
-    {
-        this.intentos = this.intentos -1;
-    }
-    EscribirIntentos(codigoIntento, codigosecreto)
-    {
-        if(codigoIntento != codigosecreto)
-        {
-            this.RestarIntentosJuego();
-        }
-        return this.intentos;
-    }
 }
 
 export default Juego;
