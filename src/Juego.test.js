@@ -28,4 +28,7 @@ describe("Juego", () => {
   it("Comparara todas los digitos del codigo Secreto con todos los digitos del intento", () => {
     expect(jugar.CompararSiEsVaca("0123","0551")).toEqual("**");
   }); 
+  it("Comparar el codigo secreto con el intento solamente en la posicion 0 para saber si es toro", () => {
+    expect(jugar.CompararSiEsToro("12345","14000")).toEqual('!');
+  }); 
 });

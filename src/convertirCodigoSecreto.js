@@ -38,6 +38,16 @@ class Juego{
         }       
         return cadenaVacas;
     }  
+    CompararSiEsToro(codigosecreto,codigoIntento)
+    {
+        let toro = '!';
+       if (codigoIntento.charAt(0) === codigosecreto.charAt(0))
+        {
+            return toro;
+        }
+    }  
+
+
 }
 
 export default Juego;
