@@ -25,19 +25,12 @@ class Juego{
     CompararSiEsVaca(codigosecreto,codigoIntento)
     {
         var vaca = '*';
-        for(var i = 0; i < codigosecreto.length; i++)
+        if(codigosecreto.charAt(0) === codigoIntento.charAt(0))
         {
-            for(var j = 0; j < codigoIntento.length; j++)
-            {
-                if(codigosecreto[i] == codigoIntento[j])
-                {
-                    vaca;
-                }
-            }
+            vaca;
         }
         return vaca;
     }  
-
 }
 
 
