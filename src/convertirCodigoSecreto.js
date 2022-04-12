@@ -124,7 +124,7 @@ class Juego{
         let cadenaTernera = '';
         for (var i =0; i < codigoIntento.length; i++)
         {
-            if (this.compararCadenas(codigosecreto,codigoIntento,(this.EsNumeSiguiente(i,i)==1)) == true)
+            if (this.compararCadenas(codigosecreto,codigoIntento,(this.EsNumeSiguiente(i,i)=='1')) == true)
             {
                 cadenaTernera += ternera;
             }
